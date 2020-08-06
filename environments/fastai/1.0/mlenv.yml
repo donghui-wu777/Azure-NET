@@ -1,0 +1,24 @@
+name: fastai-pets-env
+version: 1.0
+tags:
+    sample-tag: tag-value
+
+docker:
+  arguments: []
+  baseDockerfile: 
+  baseImage: sas.com/sasimage
+environmentVariables:
+  EXAMPLE_ENV_VAR: EXAMPLE_VALUE
+python:
+  baseCondaEnvironment: 
+  condaDependencies:
+    channels:
+    - conda-forge
+    dependencies:
+    - python=3.6.2
+    - pip:
+      - azureml-core
+      - azureml-defaults
+      - torch
+      - torchvision
+      - fastai

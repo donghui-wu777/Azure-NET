@@ -1,0 +1,51 @@
+name: Python application
+
+on: [push]
+
+env:
+  ml-ws-connection: azmldemows
+  ml-ws: gitmlworkspace
+  ml-rg: gitmlrg
+  ml-ct: cpu-cluster-1
+  ml-path: experiments/mnist
+  ml-exp: mnist
+  ml-model-name: mnist # Model name 
+  run-id: sklearn-mnist_1576553195_jans2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@master
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: install azmlcli
+      run: az extension add -n azure-cli-ml
+    - name: attach to workspace
+      working-directory: ${{env.ml-path}}
+      run: az ml folder attach -w ${{env.ml-ws}} -g ${{env.ml-rg}}
+    - name: create remote compute
+      working-directory: ${{env.ml-path}}
+      run: az ml computetarget create amlcompute -n ${{env.ml-ct}} --vm-size STANDARD_D2_V2 --max-nodes 4
+    - name: train model
+      working-directory: ${{env.ml-path}}
+      run: az ml run submit-script -c training-config --ct ${{env.ml-ct}} -e ${{env.ml-exp}} -t run.json
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: runMetadata
+        # Directory containing files to upload
+        path: experiments/mnist/run.json
+    - name: tag with runid
+      working-directory: ${{env.ml-path}}
+      run: |
+          jq '.' run.json
+          runid=`jq -r .run_id run.json`
+          echo $runid
+          git config --global user.email "azureml@microsoft.com"
+          git config --global user.name "Azure ML"
+          git tag -a $runid -m "new AzureML run"
+          git push origin $runid

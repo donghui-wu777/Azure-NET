@@ -1,0 +1,242 @@
+name: mnist
+definition: mnistdataset.yml
+sha: HASH
+
+# tabular stuff
+[{
+    "averageSpacesCount": null,
+    "columnName": "ID",
+    "count": 2,
+    "emptyCount": 0,
+    "errorCount": 0,
+    "histogram": [{
+        "count": 0.6000000000000001,
+        "lowerBound": 1,
+        "upperBound": 1.1
+    }, {
+        "count": 0.09999999999999987,
+        "lowerBound": 1.1,
+        "upperBound": 1.2
+    }, {
+        "count": 0.10000000000000009,
+        "lowerBound": 1.2,
+        "upperBound": 1.3
+    }, {
+        "count": 0.09999999999999987,
+        "lowerBound": 1.3,
+        "upperBound": 1.4
+    }, {
+        "count": 0.10000000000000009,
+        "lowerBound": 1.4,
+        "upperBound": 1.5
+    }, {
+        "count": 0.10000000000000009,
+        "lowerBound": 1.5,
+        "upperBound": 1.6
+    }, {
+        "count": 0.10000000000000009,
+        "lowerBound": 1.6,
+        "upperBound": 1.7000000000000002
+    }, {
+        "count": 0.10000000000000009,
+        "lowerBound": 1.7000000000000002,
+        "upperBound": 1.8
+    }, {
+        "count": 0.09999999999999964,
+        "lowerBound": 1.8,
+        "upperBound": 1.9
+    }, {
+        "count": 0.6000000000000001,
+        "lowerBound": 1.9,
+        "upperBound": 2
+    }],
+    "max": {
+        "type": 2,
+        "value": 2
+    },
+    "min": {
+        "type": 2,
+        "value": 1
+    },
+    "missingCount": 0,
+    "moments": {
+        "kurtosis": -2.75,
+        "mean": 1.5,
+        "skewness": 0,
+        "standardDeviation": 0.7071067811865476,
+        "variance": 0.5
+    },
+    "notMissingCount": 2,
+    "percentMissing": 0,
+    "quantiles": {
+        "p0D1": 1,
+        "p1": 1,
+        "p25": 1,
+        "p5": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2,
+        "p99": 2,
+        "p99D9": 2
+    },
+    "stringLengths": null,
+    "sTypeCounts": null,
+    "type": 2,
+    "typeCounts": [{
+        "count": 2,
+        "type": 2
+    }],
+    "uniqueValues": 2,
+    "valueCounts": [{
+        "count": 1,
+        "value": {
+            "type": 2,
+            "value": 1
+        }
+    }, {
+        "count": 1,
+        "value": {
+            "type": 2,
+            "value": 2
+        }
+    }],
+    "whiskerBottom": 1,
+    "whiskerTop": 2
+}, {
+    "averageSpacesCount": null,
+    "columnName": "Case Number",
+    "count": 2,
+    "emptyCount": 0,
+    "errorCount": 0,
+    "histogram": null,
+    "max": {
+        "type": 0,
+        "value": "HT600798"
+    },
+    "min": {
+        "type": 0,
+        "value": "HJ329710"
+    },
+    "missingCount": 0,
+    "moments": null,
+    "notMissingCount": 2,
+    "percentMissing": 0,
+    "quantiles": null,
+    "stringLengths": null,
+    "sTypeCounts": null,
+    "type": 0,
+    "typeCounts": [{
+        "count": 2,
+        "type": 0
+    }],
+    "uniqueValues": 2,
+    "valueCounts": [{
+        "count": 1,
+        "value": {
+            "type": 0,
+            "value": "HJ329710"
+        }
+    }, {
+        "count": 1,
+        "value": {
+            "type": 0,
+            "value": "HT600798"
+        }
+    }],
+    "whiskerBottom": null,
+    "whiskerTop": null
+}, {
+    "averageSpacesCount": null,
+    "columnName": "Date",
+    "count": 2,
+    "emptyCount": 0,
+    "errorCount": 0,
+    "histogram": null,
+    "max": {
+        "type": 4,
+        "value": {
+            "timestamp": 1321974900000
+        }
+    },
+    "min": {
+        "type": 4,
+        "value": {
+            "timestamp": 1051315200000
+        }
+    },
+    "missingCount": 0,
+    "moments": null,
+    "notMissingCount": 2,
+    "percentMissing": 0,
+    "quantiles": null,
+    "stringLengths": null,
+    "sTypeCounts": null,
+    "type": 4,
+    "typeCounts": [{
+        "count": 2,
+        "type": 4
+    }],
+    "uniqueValues": 2,
+    "valueCounts": [{
+        "count": 1,
+        "value": {
+            "type": 4,
+            "value": {
+                "timestamp": 1051315200000
+            }
+        }
+    }, {
+        "count": 1,
+        "value": {
+            "type": 4,
+            "value": {
+                "timestamp": 1321974900000
+            }
+        }
+    }],
+    "whiskerBottom": null,
+    "whiskerTop": null
+}, {
+    "averageSpacesCount": null,
+    "columnName": "Block",
+    "count": 2,
+    "emptyCount": 0,
+    "errorCount": 0,
+    "histogram": null,
+    "max": {
+        "type": 0,
+        "value": "105XX S WOOD ST"
+    },
+    "min": {
+        "type": 0,
+        "value": "063XX S PULASKI RD"
+    },
+    "missingCount": 0,
+    "moments": null,
+    "notMissingCount": 2,
+    "percentMissing": 0,
+    "quantiles": null,
+    "stringLengths": null,
+    "sTypeCounts": null,
+    "type": 0,
+    "typeCounts": [{
+        "count": 2,
+        "type": 0
+    }],
+    "uniqueValues": 2,
+    "valueCounts": [{
+        "count": 1,
+        "value": {
+            "type": 0,
+            "value": "105XX S WOOD ST"
+        }
+    }, {
+        "count": 1,
+        "value": {
+            "type": 0,
+            "value": "063XX S PULASKI RD"
+        }
+    }],
+    "whiskerBottom": null,
+    "whiskerTop": null
+}]

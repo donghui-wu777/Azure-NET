@@ -1,0 +1,6 @@
+[submodule "staging/Model1"]
+	path = staging/Model1
+	url = https://github.com/wibuchan/Model1.git
+[submodule "staging/Model4"]
+	path = staging/Model4
+	url = https://github.com/wibuchan/Model4.git
